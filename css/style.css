@@ -1,0 +1,354 @@
+/* ============================================
+   Portfolio — Terminal Theme
+   Single stylesheet for all pages.
+   ============================================ */
+
+/* --- Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  --bg: #0a0a0a;
+  --text: #d4d4d4;
+  --heading: #ffffff;
+  --accent: #6366f1;
+  --muted: #a1a1aa;
+  --dim: #737373;
+  --border: #27272a;
+  --hover: #ffffff;
+  --font: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+[data-theme="light"] {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --heading: #111111;
+  --accent: #6366f1;
+  --muted: #737373;
+  --dim: #a1a1aa;
+  --border: #e5e5e5;
+  --hover: #000000;
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Base --- */
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  width: 100%;
+  flex: 1;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+/* --- Navigation --- */
+nav {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 32px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+}
+
+nav .logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+nav .logo:hover {
+  color: var(--accent);
+}
+
+nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+nav .nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--hover);
+}
+
+/* --- Theme Toggle --- */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 12px;
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--hover);
+  border-color: var(--muted);
+}
+
+/* --- Footer --- */
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+footer a {
+  color: var(--dim);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+footer .version {
+  margin-left: auto;
+  color: var(--dim);
+}
+
+/* --- Terminal Elements --- */
+.prompt {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.prompt:first-child {
+  margin-top: 0;
+}
+
+.output {
+  margin-bottom: 24px;
+}
+
+.output p {
+  margin-bottom: 8px;
+}
+
+.arrow-list {
+  list-style: none;
+  padding: 0;
+}
+
+.arrow-list li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.arrow-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* --- Page Title --- */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading);
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+/* --- Quote --- */
+.quote {
+  color: var(--muted);
+  font-style: italic;
+  margin: 12px 0 24px;
+}
+
+/* --- Job / Timeline --- */
+.job {
+  margin-bottom: 32px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+
+.job-header {
+  color: var(--heading);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.job-meta {
+  color: var(--dim);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* --- Project Block --- */
+.project {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+
+.project-name {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.project-tag {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.project p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.project a {
+  font-size: 12px;
+}
+
+/* --- Skills Categories --- */
+.skill-category {
+  margin-bottom: 24px;
+}
+
+.skill-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+/* --- Section Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+/* --- Career Totals --- */
+.totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.totals span {
+  color: var(--muted);
+}
+
+.totals strong {
+  color: var(--heading);
+}
+
+/* --- Nav Links as Grid (Home page links section) --- */
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.link-grid a {
+  color: var(--accent);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  main {
+    padding: 24px 16px;
+  }
+
+  nav {
+    padding: 16px 16px 0;
+  }
+
+  nav .nav-links {
+    gap: 4px 12px;
+  }
+
+  footer {
+    padding: 16px;
+  }
+
+  .totals {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
