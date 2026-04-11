@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinesh Gujarathi — Building This Site</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="logo">dinesh.gujarathi</a>
+    <div class="nav-links">
+      <a href="../experience.html">experience</a>
+      <a href="../skills.html">skills</a>
+      <a href="../projects.html">projects</a>
+      <a href="../genai.html">genai</a>
+      <a href="../community.html">community</a>
+      <a href="../brewing.html" class="active">what's brewing</a>
+      <a href="../contact.html">contact</a>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle theme">☀ light</button>
+  </nav>
+  <main>
+    <p><a href="../brewing.html">&larr; back to what's brewing</a></p>
+
+    <div class="prompt">$ cat building-this-site.md</div>
+    <div class="output">
+      <h1>Building This Site: Terminal Aesthetic + Claude Code</h1>
+      <p><span style="color: var(--dim);">April 2026</span></p>
+    </div>
+
+    <div class="output">
+      <p>This portfolio has been on my to-do list for years. Literally years. I kept postponing it — first because I was busy automating 1000+ test cases, then because I was setting up CI/CD pipelines, then because I was leading a Playwright CoE. There was always something more urgent.</p>
+      <p>But here's the thing: if you spend 8 years making software reliable for others, at some point you need a place that says — <em>this is who I am, and this is what I've built.</em></p>
+    </div>
+
+    <div class="prompt">$ echo "why terminal?"</div>
+    <div class="output">
+      <p>Everyone's portfolio looks the same. The same hero section, the same gradient background, the same "Hi, I'm a developer" headline with a waving hand emoji. I didn't want that.</p>
+      <p>As someone who lives in terminals — running Tosca scripts, Playwright tests, CI/CD pipelines, shell commands — the terminal aesthetic felt natural. It's not a gimmick. It's how I actually work.</p>
+      <p>The rules were simple:</p>
+      <ul class="arrow-list">
+        <li>Monospace font (JetBrains Mono)</li>
+        <li>Dark background, single accent color</li>
+        <li><code>$</code> prompts as section dividers</li>
+        <li><code>&rarr;</code> arrows for lists</li>
+        <li>No images, no icons, no decorations — pure text</li>
+        <li>Content speaks for itself</li>
+      </ul>
+    </div>
+
+    <div class="prompt">$ echo "why minimalist?"</div>
+    <div class="output">
+      <p>I looked at two sites that shaped my thinking:</p>
+      <ul class="arrow-list">
+        <li><strong>cure53.de</strong> — a cybersecurity firm. No cookies, no trackers, no ads. Just text. The "I'm so good I don't need a fancy site" energy. I wanted that confidence.</li>
+        <li><strong>lynnandtonic.com</strong> — a designer who redesigns her portfolio every year (she's on version XIX). Multi-page, clean nav, dark mode. I borrowed the structure.</li>
+      </ul>
+      <p>The result is somewhere in between: terminal-styled but well-organized, minimalist but complete. Every page has a purpose, and nothing is there for decoration.</p>
+    </div>
+
+    <div class="prompt">$ echo "the tech"</div>
+    <div class="output">
+      <p>Zero dependencies. Zero build tools. Zero frameworks.</p>
+      <ul class="arrow-list">
+        <li>Plain HTML, CSS, and a tiny bit of vanilla JavaScript (just the dark/light toggle)</li>
+        <li>One CSS file with CSS custom properties for theming</li>
+        <li>GitHub Pages — push to main, live in 60 seconds</li>
+        <li>Works on any machine — no Node, no Ruby, no nothing</li>
+      </ul>
+      <p>This matters because I'm on a company laptop with restrictions. No installing Ruby for Jekyll, no npm build chains. Just files and a browser. The constraint became the feature.</p>
+    </div>
+
+    <div class="prompt">$ echo "built with claude code"</div>
+    <div class="output">
+      <p>Here's where it gets interesting. I built this entire site in a single session using <strong>Claude Code</strong> — Anthropic's CLI tool for working with code through conversation.</p>
+      <p>The workflow:</p>
+      <ul class="arrow-list">
+        <li>Started with brainstorming — described what I wanted, explored design directions visually</li>
+        <li>Narrowed down to the terminal aesthetic through a structured Q&amp;A process</li>
+        <li>Claude Code wrote a full design spec, then an implementation plan</li>
+        <li>Subagents executed each task — repo setup, CSS, pages — with commits after each step</li>
+        <li>I reviewed, gave feedback, and iterated in real-time</li>
+      </ul>
+      <p>What I found: AI doesn't replace your taste or your judgment. It amplifies your ability to execute. I knew what I wanted — the terminal vibe, the content-first approach, the "no fluff" philosophy. Claude Code turned that vision into working code faster than I could have done alone.</p>
+      <p>This is exactly what I mean when I say <em>"In this AI Era, I'm trying to be a human."</em> — the human brings the vision, the context, the decisions. AI brings the speed.</p>
+    </div>
+
+    <div class="prompt">$ echo "what's next"</div>
+    <div class="output">
+      <p>This is v.1. It's live, it's real, and it's mine. But it's not done — it never will be. I'll keep updating it the way Lynn Fisher updates hers: as a living document of who I am and what I'm building.</p>
+      <p>If you're a QA engineer or tester thinking about building your own portfolio — just start. It doesn't need to be fancy. It needs to be you.</p>
+    </div>
+
+    <div class="prompt">$ exit</div>
+  </main>
+  <footer>
+    <span>&rarr; <a href="mailto:dinesh.gujarathi3@gmail.com">email</a></span>
+    <span>&rarr; <a href="https://linkedin.com/in/dineshgujarathi">linkedin</a></span>
+    <span>&rarr; <a href="https://github.com/dinesh-bay">github</a></span>
+    <span class="version">v.1</span>
+  </footer>
+  <script src="../js/theme.js"></script>
+</body>
+</html>
