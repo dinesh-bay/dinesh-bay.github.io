@@ -97,19 +97,29 @@ nav .logo:hover {
 nav .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
+  gap: 6px 8px;
 }
 
 nav .nav-links a {
   font-size: 13px;
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 }
 
-nav .nav-links a:hover,
-nav .nav-links a.active {
+nav .nav-links a:hover {
   color: var(--hover);
+  border-color: var(--muted);
+  background-color: var(--border);
+}
+
+nav .nav-links a.active {
+  color: #ffffff;
+  border-color: var(--accent);
+  background-color: var(--accent);
 }
 
 /* --- Theme Toggle --- */
