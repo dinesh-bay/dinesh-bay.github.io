@@ -326,6 +326,12 @@ h3 {
 }
 
 /* --- Blog Layout (What's Brewing) --- */
+.blog-page main,
+.blog-page nav,
+.blog-page footer {
+  max-width: 960px;
+}
+
 .blog-layout {
   display: flex;
   gap: 32px;
