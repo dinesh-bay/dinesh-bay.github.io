@@ -26,32 +26,58 @@
       <p>Thoughts, learnings, and notes — written when the mood strikes.</p>
     </div>
 
-    <h2>[automation]</h2>
-    <ul class="arrow-list">
-      <li><em>Nothing brewing yet. Stay tuned.</em></li>
-      <!-- Add posts like: <li><a href="posts/my-post.html">Post Title</a> <span style="color: var(--dim);">— Apr 2026</span></li> -->
-    </ul>
+    <div class="blog-layout">
+      <div class="blog-main" id="blog-posts">
+        <!-- Posts go here. Each post has a data-section attribute for filtering. -->
+        <!-- Example post (uncomment and duplicate when you write one):
+        <div class="blog-post-item" data-section="automation">
+          <a href="posts/my-first-post.html">My First Post Title</a>
+          <div class="post-meta">Apr 2026 · <span class="post-tag">automation</span></div>
+        </div>
+        -->
+        <p class="blog-empty" id="empty-msg">Nothing brewing yet. Stay tuned — first post coming soon.</p>
+      </div>
 
-    <h2>[ai &amp; genai]</h2>
-    <ul class="arrow-list">
-      <li><em>Nothing brewing yet. Stay tuned.</em></li>
-    </ul>
-
-    <h2>[tools &amp; frameworks]</h2>
-    <ul class="arrow-list">
-      <li><em>Nothing brewing yet. Stay tuned.</em></li>
-    </ul>
-
-    <h2>[career &amp; growth]</h2>
-    <ul class="arrow-list">
-      <li><em>Nothing brewing yet. Stay tuned.</em></li>
-    </ul>
-
-    <h2>[random thoughts]</h2>
-    <ul class="arrow-list">
-      <li><em>Nothing brewing yet. Stay tuned.</em></li>
-    </ul>
+      <div class="blog-sidebar">
+        <div class="skill-label active-filter" data-filter="all" onclick="filterPosts('all', this)">all</div>
+        <div class="skill-label" data-filter="automation" onclick="filterPosts('automation', this)">automation</div>
+        <div class="skill-label" data-filter="ai-genai" onclick="filterPosts('ai-genai', this)">ai &amp; genai</div>
+        <div class="skill-label" data-filter="tools" onclick="filterPosts('tools', this)">tools &amp; frameworks</div>
+        <div class="skill-label" data-filter="career" onclick="filterPosts('career', this)">career &amp; growth</div>
+        <div class="skill-label" data-filter="random" onclick="filterPosts('random', this)">random thoughts</div>
+      </div>
+    </div>
   </main>
+
+  <script>
+    function filterPosts(section, el) {
+      var posts = document.querySelectorAll('.blog-post-item');
+      var labels = document.querySelectorAll('.blog-sidebar .skill-label');
+      var emptyMsg = document.getElementById('empty-msg');
+
+      labels.forEach(function(l) { l.classList.remove('active-filter'); });
+      el.classList.add('active-filter');
+
+      var visible = 0;
+      posts.forEach(function(post) {
+        if (section === 'all' || post.getAttribute('data-section') === section) {
+          post.style.display = '';
+          visible++;
+        } else {
+          post.style.display = 'none';
+        }
+      });
+
+      if (posts.length === 0) {
+        emptyMsg.style.display = '';
+      } else {
+        emptyMsg.style.display = visible === 0 ? '' : 'none';
+        emptyMsg.textContent = visible === 0
+          ? 'No posts in this section yet.'
+          : 'Nothing brewing yet. Stay tuned — first post coming soon.';
+      }
+    }
+  </script>
   <footer>
     <span>→ <a href="mailto:dinesh.gujarathi3@gmail.com">email</a></span>
     <span>→ <a href="https://linkedin.com/in/dineshgujarathi">linkedin</a></span>

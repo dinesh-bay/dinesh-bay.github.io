@@ -325,6 +325,73 @@ h3 {
   color: var(--accent);
 }
 
+/* --- Blog Layout (What's Brewing) --- */
+.blog-layout {
+  display: flex;
+  gap: 32px;
+}
+
+.blog-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-sidebar {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.blog-sidebar .skill-label {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.blog-sidebar .skill-label:hover {
+  background-color: var(--border);
+  color: var(--heading);
+}
+
+.blog-sidebar .skill-label.active-filter {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.blog-post-item {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+
+.blog-post-item a {
+  color: var(--heading);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.blog-post-item a:hover {
+  color: var(--accent);
+}
+
+.blog-post-item .post-meta {
+  color: var(--dim);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.blog-post-item .post-tag {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.blog-empty {
+  color: var(--dim);
+  font-style: italic;
+  font-size: 13px;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
@@ -349,6 +416,18 @@ h3 {
 
   .totals {
     flex-direction: column;
+    gap: 4px;
+  }
+
+  .blog-layout {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     gap: 4px;
   }
 }
