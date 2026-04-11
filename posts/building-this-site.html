@@ -25,71 +25,38 @@
 
     <div class="prompt">$ cat building-this-site.md</div>
     <div class="output">
-      <h1>Building This Site: Terminal Aesthetic + Claude Code</h1>
+      <h1>Building This Site</h1>
       <p><span style="color: var(--dim);">April 2026</span></p>
     </div>
 
     <div class="output">
-      <p>This portfolio has been on my to-do list for years. Literally years. I kept postponing it — first because I was busy automating 1000+ test cases, then because I was setting up CI/CD pipelines, then because I was leading a Playwright CoE. There was always something more urgent.</p>
-      <p>But here's the thing: if you spend 8 years making software reliable for others, at some point you need a place that says — <em>this is who I am, and this is what I've built.</em></p>
+      <p>I've been wanting to build a portfolio for a long time. Years, honestly. There was always something else going on — projects, deadlines, upskilling. It kept getting pushed.</p>
+      <p>Finally sat down and did it. Here's what went through my head.</p>
     </div>
 
     <div class="prompt">$ echo "why terminal?"</div>
     <div class="output">
-      <p>Everyone's portfolio looks the same. The same hero section, the same gradient background, the same "Hi, I'm a developer" headline with a waving hand emoji. I didn't want that.</p>
-      <p>As someone who lives in terminals — running Tosca scripts, Playwright tests, CI/CD pipelines, shell commands — the terminal aesthetic felt natural. It's not a gimmick. It's how I actually work.</p>
-      <p>The rules were simple:</p>
-      <ul class="arrow-list">
-        <li>Monospace font (JetBrains Mono)</li>
-        <li>Dark background, single accent color</li>
-        <li><code>$</code> prompts as section dividers</li>
-        <li><code>&rarr;</code> arrows for lists</li>
-        <li>No images, no icons, no decorations — pure text</li>
-        <li>Content speaks for itself</li>
-      </ul>
+      <p>Honestly? Claude Code and Codex. Spending time in these tools made me fall in love with the terminal all over again. There's something about that dark screen with monospace text that just feels right.</p>
+      <p>I've always been a minimalist when it comes to design. I design on Canva — logos, posts, newsletters — and I always lean towards clean and simple. Whenever I try to add more, it starts feeling clumsy. Less works better for me.</p>
+      <p>So when I thought about what my portfolio should look like, terminal + minimal was the obvious answer. Most portfolio sites out there look the same — same layout, same sections, same template feel. I wanted something different. Something that actually reflects how I work.</p>
     </div>
 
-    <div class="prompt">$ echo "why minimalist?"</div>
+    <div class="prompt">$ echo "the inspiration"</div>
     <div class="output">
-      <p>I looked at two sites that shaped my thinking:</p>
-      <ul class="arrow-list">
-        <li><strong>cure53.de</strong> — a cybersecurity firm. No cookies, no trackers, no ads. Just text. The "I'm so good I don't need a fancy site" energy. I wanted that confidence.</li>
-        <li><strong>lynnandtonic.com</strong> — a designer who redesigns her portfolio every year (she's on version XIX). Multi-page, clean nav, dark mode. I borrowed the structure.</li>
-      </ul>
-      <p>The result is somewhere in between: terminal-styled but well-organized, minimalist but complete. Every page has a purpose, and nothing is there for decoration.</p>
+      <p>I came across <strong>cure53.de</strong> — a cybersecurity firm. Pure text, no decoration, no nonsense. And <strong>lynnandtonic.com</strong> — a designer who redesigns her portfolio every year. Multi-page, clean nav, dark mode.</p>
+      <p>I wanted something in between. The no-fluff approach of cure53, but organized like lynnandtonic with separate pages for each section.</p>
     </div>
 
-    <div class="prompt">$ echo "the tech"</div>
+    <div class="prompt">$ echo "how I built it"</div>
     <div class="output">
-      <p>Zero dependencies. Zero build tools. Zero frameworks.</p>
-      <ul class="arrow-list">
-        <li>Plain HTML, CSS, and a tiny bit of vanilla JavaScript (just the dark/light toggle)</li>
-        <li>One CSS file with CSS custom properties for theming</li>
-        <li>GitHub Pages — push to main, live in 60 seconds</li>
-        <li>Works on any machine — no Node, no Ruby, no nothing</li>
-      </ul>
-      <p>This matters because I'm on a company laptop with restrictions. No installing Ruby for Jekyll, no npm build chains. Just files and a browser. The constraint became the feature.</p>
-    </div>
-
-    <div class="prompt">$ echo "built with claude code"</div>
-    <div class="output">
-      <p>Here's where it gets interesting. I built this entire site in a single session using <strong>Claude Code</strong> — Anthropic's CLI tool for working with code through conversation.</p>
-      <p>The workflow:</p>
-      <ul class="arrow-list">
-        <li>Started with brainstorming — described what I wanted, explored design directions visually</li>
-        <li>Narrowed down to the terminal aesthetic through a structured Q&amp;A process</li>
-        <li>Claude Code wrote a full design spec, then an implementation plan</li>
-        <li>Subagents executed each task — repo setup, CSS, pages — with commits after each step</li>
-        <li>I reviewed, gave feedback, and iterated in real-time</li>
-      </ul>
-      <p>What I found: AI doesn't replace your taste or your judgment. It amplifies your ability to execute. I knew what I wanted — the terminal vibe, the content-first approach, the "no fluff" philosophy. Claude Code turned that vision into working code faster than I could have done alone.</p>
-      <p>This is exactly what I mean when I say <em>"In this AI Era, I'm trying to be a human."</em> — the human brings the vision, the context, the decisions. AI brings the speed.</p>
+      <p>Plain HTML, CSS, and a little JavaScript for the dark/light toggle. No frameworks, no build tools, no dependencies. I'm on a company laptop so installing things like Ruby or Node isn't always straightforward. Keeping it simple solved that problem.</p>
+      <p>I used <strong>Claude Code</strong> to build it. Gave it my context — my resume, my achievements, what I wanted — and we went back and forth. I made the design decisions, reviewed everything, gave feedback, and iterated. Claude Code handled the execution.</p>
+      <p>That's the thing about AI tools — they don't replace your thinking. You still need to know what you want and what looks right. The AI just gets you there faster.</p>
     </div>
 
     <div class="prompt">$ echo "what's next"</div>
     <div class="output">
-      <p>This is v.1. It's live, it's real, and it's mine. But it's not done — it never will be. I'll keep updating it the way Lynn Fisher updates hers: as a living document of who I am and what I'm building.</p>
-      <p>If you're a QA engineer or tester thinking about building your own portfolio — just start. It doesn't need to be fancy. It needs to be you.</p>
+      <p>This is v.1. I'll keep updating it as things change. If you're a tester or QA engineer thinking about building yours — just start. Doesn't need to be perfect.</p>
     </div>
 
     <div class="prompt">$ exit</div>
