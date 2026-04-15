@@ -244,6 +244,10 @@ h3 {
   flex: 1;
 }
 
+.whoami-section {
+  margin-bottom: 8px;
+}
+
 .profile-pic {
   width: 180px;
   height: 180px;
