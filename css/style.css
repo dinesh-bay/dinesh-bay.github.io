@@ -245,7 +245,11 @@ h3 {
 }
 
 .whoami-section {
-  margin-bottom: 8px;
+  margin-bottom: 0;
+}
+
+.whoami-section + .prompt {
+  margin-top: 16px;
 }
 
 .profile-pic {
